@@ -16,7 +16,7 @@
                 alt=""></div>
         <nav>
             <div class="menu-toggle">
-                <i class="fas fa-bars" id="menu-icon"></i>
+            <i class="fas fa-bars" id="menu-icon"></i>
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#">Home</a></li>
@@ -24,9 +24,19 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+
         </nav>
     </header>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
 
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuIcon.classList.toggle('fa-times');
+            menuIcon.classList.toggle('fa-bars');
+        });
+    </script>
     <main>
         <section class="about" id="about">
             <div class="about-img">
@@ -147,16 +157,7 @@
         </div>
     </footer>
 
-    <script>
-        const menuIcon = document.getElementById('menu-icon');
-        const navLinks = document.getElementById('nav-links');
 
-        menuIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuIcon.classList.toggle('fa-times');
-            menuIcon.classList.toggle('fa-bars');
-        });
-    </script>
 
 </body>
 

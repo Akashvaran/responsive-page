@@ -16,16 +16,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-
 .logo img {
     height: 80px;
     border-radius: 50%;
 }
 
-nav {
-    position: relative;
-}
 
 .nav-links {
     list-style: none;
@@ -46,57 +43,47 @@ nav {
     display: none; 
     cursor: pointer;
 }
-
-
-
 @media (max-width: 768px) {
     .nav-links {
-        display: none; 
-        flex-direction: column; 
-        position: absolute;
-        width:400px;
-        top: 70px; 
-        right: -20px;
-        background: #333; 
-        align-items: center;
+        display: none;
     }
     .logo img {
         height: 60px;
         border-radius: 50%;
     }
-
     .nav-links.active {
-        display: flex; 
+        position: absolute;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        left: 0;
+        right: 0;        
+        top: 100px;
+        width:100%;         
+        background: #333;        
     }
-
     .menu-toggle {
         display: block;
     }
 
     .nav-links li {
         margin:10px 0;
-        font-size: 20px;
-        
+        font-size: 20px;        
     }
     .about-section {
         flex-direction: column;
         text-align: center;
     }
-
     .about-image {
         margin-right: 0;
         margin-bottom: 20px;
     }
 }
-
-
+/* About Section */
 main {
     padding: 20px;
 }
 
-
-
-/* About Section */
 .about {
     display: flex;
     align-items: center;
@@ -200,13 +187,11 @@ main {
   .card {
     width: 90%;
     padding: 2em;
-    background: linear-gradient(#ffffff 50%, #000000 50%);
     background-size: 100% 200%;
     background-position: 0 2.5%;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-    cursor: pointer;
-    transition: background-position 0.5s ease-in-out, color 0.5s;
+
   }
   
   h3 {
@@ -234,24 +219,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: auto;
-    transition: background-color 0.5s, color 0.5s;
-  }
-  
-  .card:hover {
-    background-position: 0 100%;
-  }
-  
-  .card:hover .icon-wrapper {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .card:hover h3 {
-    color: #ffffff;
-  }
-  
-  .card:hover p {
-    color: #f0f0f0;
+
   }
 
   @media screen and (min-width: 768px) {
@@ -268,19 +236,13 @@ main {
   @media screen and (min-width: 992px) {
     section {
       padding: 1em 3em;
-    }
-  
+    }  
     .column {
       flex: 0 0 33.33%; 
       max-width: 33.33%;
     }
   }
-
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+  
 
 footer {
     background-color: #111;
